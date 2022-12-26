@@ -1,0 +1,130 @@
+/* підключення шрифтів */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono&display=swap");
+
+/* видима частина вікна браузера */
+body {
+  padding: 0;
+  margin: 0;
+  max-width: 100vw;
+  min-height: 100vh;
+  font-family: "Bebas Neue", cursive;
+}
+
+/* основний контейнер */
+.toaster {
+  background: #8d58ff;
+  color: white;
+  padding: 55px;
+  width: 520px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  transition: bottom 1s ease-in-out;
+}
+
+/* комбінований селектор для виведення тостера за межі сторінки */
+.toaster.collapsed {
+  bottom: -600px;
+}
+
+/* елемент закриття вікна */
+.close {
+  position: absolute;
+  top: -40px;
+  left: 55px;
+}
+
+/* кнопка закриття вікна */
+.close-toaster {
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  line-height: 1rem;
+  letter-spacing: 0.03em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: "Bebas Neue", cursive;
+  color: #3200a0;
+  cursor: pointer;
+}
+
+/* заголовок */
+h1 {
+  font-family: "Bebas Neue", cursive;
+  text-transform: uppercase;
+  font-size: 5.875rem;
+  padding: 0;
+  margin: 0;
+  line-height: 4.5rem;
+  font-weight: normal;
+}
+
+/* описова частина */
+p {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1rem;
+  line-height: 1.875rem;
+  padding-bottom: 30px;
+}
+
+/* зображення */
+.cover {
+  position: absolute;
+  right: -120px;
+  top: -120px;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25);
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+/* стан зображення, коли весь тостер за межами вікна браузера */
+.collapsed .cover {
+  opacity: 0;
+}
+
+/* загальні налаштування форми */
+form {
+  display: flex;
+  align-items: center;
+}
+
+/* загальні налаштування підписів полів */
+label {
+  color: #faff00;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* налаштування поля введення електронної пошти */
+input[type="email"] {
+  background: #b686ff;
+  width: 325px;
+  height: 55px;
+  border-radius: 4px;
+  font-family: "Roboto Mono", monospace;
+  color: black;
+  font-size: 1.25rem;
+  padding: 0 20px;
+  border: none;
+  margin-right: 10px;
+}
+
+/* налаштування кнопки */
+.submit {
+  background: none;
+  border: none;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
